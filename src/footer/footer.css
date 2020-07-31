@@ -1,0 +1,16 @@
+footer {
+    background-color: #169DB2;
+    color: white;
+    padding: 1rem;
+}
+.footer i {
+    margin: .5rem;
+    transform: scale(1.1);
+}
+
+.social a, .social a:active, .social a:hover {
+    color: white;
+}
+.social i:hover {
+    transform: scale(1.2);
+}
