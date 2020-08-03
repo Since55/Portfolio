@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import person from "../img/person.jpg";
 
@@ -6,12 +6,24 @@ import "./total.css";
 
 const TotalInfo = () => {
     
+    const [classList, setClassList] = useState("person-img");
+
+    let zoom = false;
+
+    const toggleZoom = () => {
+        if ( !classList.includes("zoom") ) setClassList(classList + " zoom");
+        else setClassList("person-img");
+        console.log(classList);
+        console.log(zoom)
+    }
+    
+
     return (
         <aside className="total-cont col-12 col-sm-12 col-md-6 col-lg-5 col-xl-3">
             <div className="total text-secondary">
                 {/* Photo */}
                 <section className="total-person">
-                    <img className="person-img" src={person} alt="Person is lost"/>
+                    <img onClick={ () => toggleZoom() } className={classList} src={person} alt="Person is lost"/>
                     
                 </section>
                 {/* Total info */}
