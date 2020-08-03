@@ -6,15 +6,13 @@ import "./total.css";
 
 const TotalInfo = () => {
     
+    // class list for portfolio photo
     const [classList, setClassList] = useState("person-img");
 
-    let zoom = false;
-
+    // full screen image class toggler
     const toggleZoom = () => {
         if ( !classList.includes("zoom") ) setClassList(classList + " zoom");
         else setClassList("person-img");
-        console.log(classList);
-        console.log(zoom)
     }
     
 
